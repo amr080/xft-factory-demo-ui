@@ -16,13 +16,15 @@ document.getElementById('deploy-form').onsubmit = async function(e) {
   // Simulate async operation
   await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // Simulated roles
+  // Simulated roles with requested names
   const roles = {
     admin: data.owner,
     minter: data.owner,
-    pauser: data.owner,
-    blocklistAdmin: data.owner,
-    regulator: data.owner
+    burner: data.owner,
+    blocklist: data.owner,
+    oracle: data.owner,
+    upgrade: data.owner,
+    pause: data.owner
   };
 
   // Simulated deployment result
